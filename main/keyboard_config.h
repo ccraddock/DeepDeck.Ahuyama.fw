@@ -59,7 +59,7 @@
 #define RGB_LEDS
 
 // Gesture sensor. Comment to disable
-#define GESTURE_ENABLE
+// #define GESTURE_ENABLE
 
 // Wifi. Comment to disable
 #define WIFI_ENABLE
@@ -73,7 +73,7 @@
 // #define LAYER_MODIFICATION_MODE5
 
 //OLED Parameters
-#define OLED_ENABLE //undefine if no oled is used.
+//#define OLED_ENABLE //undefine if no oled is used.
 #define ROTATION LANDSCAPE
 #define OLED_SDA_PIN GPIO_NUM_21
 #define OLED_SCL_PIN GPIO_NUM_22

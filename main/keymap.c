@@ -86,23 +86,24 @@ enum custom_macros
  * important- make sure you you put the macros in the same order as the their enumeration
  */
 uint16_t macros[MACROS_NUM][MACRO_LEN] = {
-	// KC_CTR + ALT - //Ubuntu windows manager (change workspace)
-	{KC_LCTRL, KC_LALT, KC_NO},
-	// KC_CTR + ALT + Shift - Ubuntu windows manager (move windows)
-	{KC_LCTRL, KC_LALT, KC_LSHIFT, KC_NO},
-	// Shutter
-	{KC_LALT, KC_LSHIFT, KC_S, KC_NO},
-	// Terminal
-	{KC_LCTRL, KC_LALT, KC_T, KC_NO},
-	// alt + Tab
-	{KC_LALT, KC_TAB, KC_NO},
-	// alt + Shift + Tab
-	{KC_LALT, KC_LSHIFT, KC_TAB, KC_NO},
 
-	// Chrome - Next tab
-	{KC_LCTRL, KC_TAB, KC_NO},
-	// Chrome - Prev tab
-	{KC_LCTRL, KC_LSHIFT, KC_TAB, KC_NO},
+	// mac_copy
+	{KC_LCMD, KC_C, KC_NO},
+	// mac_pste
+	{KC_LCMD, KC_V, KC_NO},
+	// mac_pscr
+	{KC_LCMD, KC_LSHIFT, KC_4, KC_NO},
+	// mac_undo
+	{KC_LCMD, KC_Z, KC_NO},
+	// vs_finda (find all)
+	{KC_LCMD, KC_LSHIFT, KC_F, KC_NO},
+	// mac_appi
+	{KC_LCMD, KC_TAB, KC_NO},
+
+	// mac_wini
+	{KC_LCMD, KC_GRV, KC_NO},
+	// prev_tab
+	{KC_LSHIFT, KC_TAB, KC_NO},
 	// Chrome - New tab
 	{KC_LCTRL, KC_T, KC_NO},
 	// Chrome - New Window
@@ -178,7 +179,7 @@ uint16_t macros[MACROS_NUM][MACRO_LEN] = {
 // 							  "KC_APP_VSCODE_FIND_ALL", "KC_APP_VSCODE_UNDO", "KC_APP_VSCODE_REDO", "KC_APP_COPY", "KC_APP_PASTE",
 // 							  "KC_SPECIAL_LINK"};
 
-char *default_macro_name[] = {"macro_1","macro_2","macro_3","macro_4","macro_5","macro_6","macro_7","macro_8","macro_9",
+char *default_macro_name[] = {"mac_copy","mac_pste","mac_prsc","mac_undo","vs_finda","mac_appi","mac_wini","prev_tab","macro_9",
 							  "macro_10","macro_11","macro_12","macro_13","macro_14","macro_15","macro_16","macro_17","macro_18","macro_19",
 							  "macro_20","macro_21","macro_22","macro_23","macro_24","macro_25","macro_26","macro_27","macro_28","macro_29",
 							  "macro_30","macro_31","macro_32","macro_33","macro_34","macro_35","macro_36","macro_37","macro_38","macro_39",
