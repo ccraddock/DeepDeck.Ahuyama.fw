@@ -13,7 +13,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
-#include "oled_tasks.h"
+#include "tft_tasks.h"
+#include "oled_tasks.h" // eventually want to be able to remove this
 
 #define FIRMWARE_VERSION "0.5.7"
 #define MODULE_ID "ESP32"
@@ -59,7 +60,7 @@
 #define RGB_LEDS
 
 // Gesture sensor. Comment to disable
-#define GESTURE_ENABLE
+// #define GESTURE_ENABLE
 
 // Wifi. Comment to disable
 #define WIFI_ENABLE
@@ -77,6 +78,8 @@
 #define ROTATION LANDSCAPE
 #define OLED_SDA_PIN GPIO_NUM_21
 #define OLED_SCL_PIN GPIO_NUM_22
+
+#define TFT_ENABLE
 
 /*Battery monitoring
  * Please read check battery_monitor.h for resistor values before applying

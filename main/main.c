@@ -78,7 +78,7 @@
 #include "wifi_handles.h"
 #include "server.h"
 #include "spiffs.h"
-
+#include "tft_tasks.h"
 
 // plugin functions
 static config_data_t config;
@@ -210,6 +210,17 @@ user_i2c_mutex = xSemaphoreCreateMutex();
 
 	xTaskCreate(oled_task, "oled task", MEM_OLED_TASK, NULL,PRIOR_OLED_TASK, &xOledTask);
 	ESP_LOGI("Oled", "initialized");
+#endif
+
+#ifdef TFT_ENABLE
+    init_tft();
+	// init_oled(ROTATION);
+
+	tftSplashScreen();
+	vTaskDelay(pdMS_TO_TICKS(1000));
+
+	// xTaskCreate(oled_task, "oled task", MEM_OLED_TASK, NULL,PRIOR_OLED_TASK, &xOledTask);
+	ESP_LOGI("TFT", "initialized");
 #endif
 
 	// activate encoder functions

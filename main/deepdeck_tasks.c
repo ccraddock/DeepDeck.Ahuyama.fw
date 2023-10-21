@@ -58,7 +58,8 @@ bool DEEP_SLEEP = true; // flag to check if we need to go to deep sleep
 void oled_task(void *pvParameters)
 {
 	deepdeck_status = S_NORMAL; // sSet the status of the screen.
-	ble_connected_oled();
+	ble_connected_tft();
+	// ble_connected_oled();
 	bool CON_LOG_FLAG = false; // Just because I don't want it to keep logging the same thing a billion times
 
 	while (1)
